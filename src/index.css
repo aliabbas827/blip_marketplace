@@ -1,0 +1,45 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --blue-color: #4563ff;
+    --red-color: #ff4040;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+  }
+
+  .sidebar {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
