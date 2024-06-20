@@ -5,3 +5,7 @@ export {default as googlewhite} from './googlewhite.png';
 export {default as appwhite} from './appwhite.png';
 export {default as close} from './close.png';
 export {default as menu} from './menu.png';
+export {default as arrow} from './arrow.png';
+export {default as orderimg} from './orderimg.png';
+export {default as packageimg} from './packageimg.png';
+export {default as deliveredimg} from './deliveredimg.png';

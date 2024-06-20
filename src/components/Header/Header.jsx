@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <div className='px-10 md:px-8 lg:px-10 xl:px-20 py-8 flex justify-between items-center'>
+                <div className='px-5 md:px-8 lg:px-10 xl:px-20 py-8 flex justify-between items-center'>
                     <div className='flex gap-5 md:gap-5 lg:gap-10 xl:gap-20 items-center'>
                         <NavLink to="/" className='flex flex-col items-center gap-1' >
                             <img src={images.logo} alt="" className='w-24 md:w-28 lg:w-24 xl:w-28' />
@@ -47,12 +47,12 @@ const Header = () => {
                         <img
                             src={toggle ? images.close : images.menu}
                             alt="menu"
-                            className="w-12 object-contain"
+                            className="w-10 object-contain"
                             onClick={() => setToggle((prev) => !prev)}
                         />
                     </div>
                     {toggle && (
-                        <div className="lg:hidden absolute top-[17.5vh] md:top-[14vh] right-0 w-full px-1 z-[120]">
+                        <div className="lg:hidden absolute top-[17.5vh] md:top-[18.5vh] right-0 w-full px-1 z-[120]">
                             <div className="p-6 bg-black text-white shadow-2xl mx-4 my-2 rounded-xl sidebar">
                                 <ul className=' items-center gap-5 flex flex-col justify-center'>
                                     {
