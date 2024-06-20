@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Delivery = () => {
     return (
         <>
-            <section className='pt-10 '>
+            <section className='pt-10' id='delivery-zone'>
                 <div className='flex flex-col items-center gap-1'>
                     <h1 className='font-medium text-[13px] md:text-base tracking-[7px]'>COVERAGE AREA</h1>
                     <h1 className='text-[30px] lg:text-[36px] xl:text-[40px] font-bold'>Delivery Zones</h1>
@@ -52,7 +52,7 @@ const Delivery = () => {
                 </div>
                 <div className='block md:hidden bg-bottom-mobile h-[70vh] rounded-b-[40px]'>
                      <div className='flex flex-col items-center justify-center gap-4 h-full'>
-                     <h1 className='text-[30px]  font-bold tracking-wide w-[60%] text-center'>Download the App Now</h1>
+                     <h1 className='text-[30px]  font-bold tracking-wide w-[65%] text-center'>Download the App Now</h1>
                     <div className='flex items-center gap-3'>
                         <Link to={"/"}>
                             <img src={images.googleblack} alt="" className='w-36' />

@@ -3,7 +3,7 @@ import * as images from "../../assets"
 const Work = () => {
   return (
     <>
-      <section className='py-16 container mx-auto'>
+      <section className='py-16 container mx-auto' id="howitworks">
         <div className='flex flex-col items-center gap-2'>
           <h1 className='font-medium text-base tracking-[7px]'>STEP BY STEP</h1>
           <h1 className='md:text-[30px] lg:text-[36px] xl:text-[40px] font-bold'>How It Works</h1>
