@@ -15,7 +15,7 @@ const Delivery = () => {
                         <img src={images.drone} alt="" />
 
                     </div>
-                    <div className='absolute md:bottom-[-45px] lg:bottom-[-14px] xl:bottom-7 md:right-[36%] lg:right-[37%] '>
+                    <div className='absolute md:bottom-[-32px] lg:bottom-0 xl:bottom-10 md:right-[36%] lg:right-[37%] '>
                         <div className='flex flex-col items-center justify-center md:gap-3 lg:gap-6 xl:gap-8'>
                             <div className='flex flex-col items-center '>
                                 <h1 className='md:text-[24px] lg:text-[29px] xl:text-[40px] font-bold tracking-wide text-white' >Join Our Network</h1>
