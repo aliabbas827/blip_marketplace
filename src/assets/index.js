@@ -12,3 +12,6 @@ export {default as deliveredimg} from './deliveredimg.png';
 export {default as location} from './location.png';
 export {default as mail} from './mail.png';
 export {default as insta} from './insta.png';
+export {default as drone} from './drone.png';
+export {default as qrcode} from './qrcode.png';
+export {default as mapmobile} from './mapmobile.png';
