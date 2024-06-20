@@ -18,9 +18,8 @@ const Header = () => {
             <header className='container mx-auto'>
                 <div className='px-0 md:px-4 lg:px-5 xl:px-10 py-4 flex justify-between items-center'>
                     <div className='flex gap-5 md:gap-5 lg:gap-10 xl:gap-20 items-center'>
-                        <NavLink to="/" className='flex flex-col items-center gap-1' >
+                        <NavLink to="/" className='' >
                             <img src={images.logo} alt="" className='w-24 md:w-28 lg:w-24 xl:w-28' />
-                            <h1 className='tracking-wider text-[12px] md:text-sm lg:text-[12px] xl:text-sm font-bold'>MARKETPLACE</h1>
                         </NavLink>
                         <div className='hidden lg:flex items-center '>
 

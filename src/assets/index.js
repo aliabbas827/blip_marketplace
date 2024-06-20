@@ -9,3 +9,6 @@ export {default as arrow} from './arrow.png';
 export {default as orderimg} from './orderimg.png';
 export {default as packageimg} from './packageimg.png';
 export {default as deliveredimg} from './deliveredimg.png';
+export {default as location} from './location.png';
+export {default as mail} from './mail.png';
+export {default as insta} from './insta.png';
