@@ -46,16 +46,16 @@ const ContactForm = () => {
                     <div className="flex md:flex-row flex-col md:gap-10 gap-4 items-center justify-between">
                         <div className='md:w-[50%] w-full'>
                             <Label htmlFor="phone">Phone</Label>
-                            <Input type="number" id="phone" name="phone" />
+                            <Input type="number" id="phone" name="phone" required={true} />
                         </div>
                         <div className='md:w-[50%] w-full'>
                             <Label htmlFor="email">Email</Label>
-                            <Input type="email" id="email" name="email" />
+                            <Input type="email" id="email" name="email" required={true} />
                         </div>
                     </div>
                     <div>
                         <Label htmlFor="message">Message</Label>
-                        <Textarea id="message" name="message" />
+                        <Textarea id="message" name="message" required={true} />
                     </div>
                     <div className='md:w-[30%] w-full mt-5'>
                         <Button>Send</Button>
