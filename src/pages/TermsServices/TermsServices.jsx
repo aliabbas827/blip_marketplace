@@ -5,7 +5,7 @@ const TermsServices = () => {
     return (
         <>
             <section>
-                <div className='bg_contact md:h-[60vh] mt-10 h-[40vh]'>
+                <div className='bg_contact md:h-[60vh] lg:mt-10 mt-24 h-[40vh]'>
 
                 </div>
                 <div className='md:container md:mx-auto px-4 md:px-20 pb-16'>

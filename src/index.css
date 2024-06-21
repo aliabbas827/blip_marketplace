@@ -104,8 +104,8 @@ input::-webkit-inner-spin-button {
 }
 .bg-map-mobile {
   background-image: url("../src/assets/map.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 250%;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 .bg-brown {

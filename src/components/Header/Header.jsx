@@ -96,7 +96,7 @@ const Header = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <div className='flex items-center justify-end gap-3 md:gap-5 mt-5'>
+                                <div className='flex items-center justify-center gap-3 md:gap-5 mt-5'>
                                     <Link to={"/"}>
                                         <img src={images.googlewhite} alt="Google" className='w-40 md:w-48' />
                                     </Link>

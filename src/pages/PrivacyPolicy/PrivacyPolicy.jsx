@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
     return (
         <>
             <section>
-                <div className='bg_contact md:h-[60vh] mt-10 h-[40vh]'>
+                <div className='bg_contact md:h-[60vh] lg:mt-10 mt-24 h-[40vh]'>
                 </div>
                 <div className='md:container md:mx-auto px-4 md:px-20 pb-16'>
                     <div className='md:mt-[-120px] mt-[-60px] flex md:flex-row flex-col justify-start md:gap-3 gap-10'>

@@ -26,7 +26,7 @@ const ContactUs = () => {
   return (
     <>
       <section className="">
-        <div className='bg_contact md:h-[60vh] mt-10 h-[40vh]'>
+        <div className='bg_contact md:h-[60vh] lg:mt-10 mt-24 h-[40vh]'>
         </div>
         <div className='md:container md:mx-auto pb-16'>
           <div className='md:mt-[-120px] mt-[-60px] flex md:flex-row flex-col justify-center md:gap-3 gap-10'>
