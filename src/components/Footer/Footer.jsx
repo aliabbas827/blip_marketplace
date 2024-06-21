@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { useIntersection } from "react-use";
 import * as images from "../../assets"
 import { Link } from 'react-router-dom';
 const Footer = () => {
@@ -6,8 +8,50 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     // setToggle(false);
   };
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust the threshold value as needed
+  });
+
+  useEffect(() => {
+    const textElements = Array.from(sectionRef.current.children);
+
+    const fadeIn = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        ease: "power4.out",
+        stagger: {
+          amount: 0.3,
+        },
+      });
+    };
+
+    const fadeOut = () => {
+      gsap.to(textElements, {
+        duration: 1,
+        opacity: 0,
+        y: "100%",
+        scale: 0.1,
+        ease: "power4.out",
+        stagger: {
+          amount: 0.3,
+        },
+      });
+    };
+
+    if (intersection && intersection.intersectionRatio >= 0.5) {
+      fadeIn();
+    } else {
+      fadeOut();
+    }
+  }, [intersection]);
   return (
-    <footer className='py-6'>
+    <footer className='py-6' ref={sectionRef}>
       <div className='md:w-[80%] w-full m-auto'>
         <div className='flex flex-col gap-3 items-center'>
           <div>

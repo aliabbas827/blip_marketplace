@@ -1,15 +1,89 @@
-import React from 'react'
+import React, { useRef, useEffect } from "react";
 import * as images from "../../assets"
 import { Link } from 'react-router-dom'
+import gsap from "gsap";
+import { useIntersection } from "react-use";
+import PartnerMobile from "../PartnerMobile/PartnerMobile";
+import DownloadAppMobile from "../DownloadAppMobile/DownloadAppMobile";
 const Delivery = () => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         // setToggle(false);
-      };
+    };
+    const sectionRef1 = useRef(null);
+    const sectionRef2 = useRef(null);
+    const sectionRef3 = useRef(null);  // Third ref
+
+    // Set up intersection observers for each ref
+    const intersection1 = useIntersection(sectionRef1, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+    });
+    const intersection2 = useIntersection(sectionRef2, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+    });
+    const intersection3 = useIntersection(sectionRef3, {  // Third intersection observer
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+    });
+
+    // Animation function
+    const animate = (elements, shouldFadeIn) => {
+        gsap.to(elements, {
+            duration: 1,
+            opacity: shouldFadeIn ? 1 : 0,
+            y: shouldFadeIn ? 0 : "100%",
+            scale: shouldFadeIn ? 1 : 0.1,
+            ease: "power4.out",
+            stagger: {
+                amount: 0.3,
+            },
+        });
+    };
+
+    // Effect for first div
+    useEffect(() => {
+        if (sectionRef1.current) {
+            const textElements = Array.from(sectionRef1.current.children);
+            if (intersection1 && intersection1.intersectionRatio >= 0.5) {
+                animate(textElements, true);
+            } else {
+                animate(textElements, false);
+            }
+        }
+    }, [intersection1]);
+
+    // Effect for second div
+    useEffect(() => {
+        if (sectionRef2.current) {
+            const textElements = Array.from(sectionRef2.current.children);
+            if (intersection2 && intersection2.intersectionRatio >= 0.5) {
+                animate(textElements, true);
+            } else {
+                animate(textElements, false);
+            }
+        }
+    }, [intersection2]);
+
+    // Effect for third div
+    useEffect(() => {
+        if (sectionRef3.current) {
+            const textElements = Array.from(sectionRef3.current.children);
+            if (intersection3 && intersection3.intersectionRatio >= 0.5) {
+                animate(textElements, true);
+            } else {
+                animate(textElements, false);
+            }
+        }
+    }, [intersection3]);
     return (
         <>
             <section className='pt-10' id='delivery-zone'>
-                <div className='flex flex-col items-center gap-1'>
+                <div className='flex flex-col items-center gap-1' ref={sectionRef1}>
                     <h1 className='font-medium text-[13px] md:text-base tracking-[7px]'>COVERAGE AREA</h1>
                     <h1 className='text-[30px] lg:text-[36px] xl:text-[40px] font-bold'>Delivery Zones</h1>
                     <p className='w-[60%] sm:w-full text-center text-[16px] lg:text-[18px] xl:text-[22px] '>Currently serving select areas. More coming soon!</p>
@@ -19,7 +93,7 @@ const Delivery = () => {
                         <img src={images.drone} alt="" />
                     </div>
                     <div className='absolute md:bottom-[-49px] lg:bottom-[-20px] xl:bottom-2 md:right-[36%] lg:right-[37%] '>
-                        <div className='flex flex-col items-center justify-center md:gap-3 lg:gap-6 xl:gap-8'>
+                        <div className='flex flex-col items-center justify-center md:gap-3 lg:gap-6 xl:gap-8' ref={sectionRef2}>
                             <div className='flex flex-col items-center '>
                                 <h1 className='md:text-[24px] lg:text-[29px] xl:text-[40px] font-bold tracking-wide text-white' >Join Our Network</h1>
                                 <p className='md:text-[12px] lg:text-[15px] xl:text-[22px] text-white'>For QSRs, Restaurants, and Retailers</p>
@@ -28,7 +102,7 @@ const Delivery = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-bottom  rounded-b-[60px]  md:h-[80vh]  lg:h-[90vh] xl:h-[90vh] md:flex flex-col items-center justify-center gap-4 md:gap-8 hidden '>
+                <div className='bg-bottom  rounded-b-[60px]  md:h-[80vh]  lg:h-[90vh] xl:h-[90vh] md:flex flex-col items-center justify-center gap-4 md:gap-8 hidden ' ref={sectionRef3}>
                     <h1 className='text-[30px] lg:text-[36px] xl:text-[40px] font-bold tracking-wide '>Download the App Now</h1>
                     <img src={images.qrcode} alt="" className='md:w-28 lg:w-32 xl:w-36' />
                     <div className='flex items-center gap-5'>
@@ -44,26 +118,10 @@ const Delivery = () => {
                     {/* <img src={images.mapmobile} alt="" /> */}
                 </div>
                 <div className='block md:hidden bg-brown h-[70vh]'>
-                    <div className='flex flex-col items-center justify-center gap-7 h-full'>
-                        <h1 className='text-[30px]  font-bold tracking-wide text-white' >Join Our Network</h1>
-                        <div className='flex flex-col items-center gap-4'>
-                            <p className='text-[18px] text-white'>For QSRs, Restaurants, and Retailers</p>
-                            <Link to={"/contact"} onClick={scrollToTop} className='bg-white text-black text-[15px] font-bold px-14 py-3 rounded-[10px] tracking-wider'>BECOME A PARTNER</Link>
-                        </div>
-                    </div>
+                    <PartnerMobile />
                 </div>
                 <div className='block md:hidden bg-bottom-mobile h-[70vh] rounded-b-[40px]'>
-                     <div className='flex flex-col items-center justify-center gap-4 h-full'>
-                     <h1 className='text-[30px]  font-bold tracking-wide w-[65%] text-center'>Download the App Now</h1>
-                    <div className='flex items-center gap-3'>
-                        <Link to={"/"}>
-                            <img src={images.googleblack} alt="" className='w-36' />
-                        </Link>
-                        <Link to={"/"}>
-                            <img src={images.appblack} alt="" className='w-36' />
-                        </Link>
-                    </div>
-                     </div>
+                    <DownloadAppMobile />
                 </div>
             </section>
         </>

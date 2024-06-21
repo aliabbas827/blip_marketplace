@@ -1,8 +1,28 @@
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
 import ContactForm from "@/components/ContactForm/ContactForm"
 import * as images from "../../assets"
-import React from 'react'
 
 const ContactUs = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      const textElements = Array.from(sectionRef.current.children);
+      textElements.forEach(element => {
+        gsap.fromTo(element, {
+          opacity: 0, 
+          x: '-100%', 
+        }, {
+          duration: 1,
+          opacity: 1, 
+          x: 0, 
+          ease: "power4.out",
+          stagger: 0.8, 
+        });
+      });
+    }
+  }, []);
   return (
     <>
       <section className="">
@@ -10,7 +30,7 @@ const ContactUs = () => {
         </div>
         <div className='md:container md:mx-auto pb-16'>
           <div className='md:mt-[-120px] mt-[-60px] flex md:flex-row flex-col justify-center md:gap-3 gap-10'>
-            <div className='md:w-[40%] w-full flex flex-col md:items-start items-center gap-6'>
+            <div className='md:w-[40%] w-full flex flex-col md:items-start items-center gap-6' ref={sectionRef}>
               <h1 className='uppercase tracking-[8px] font-semibold text-lg'>Contact</h1>
               <h1 className='capitalize font-bold md:text-5xl text-3xl'>Let's get in touch</h1>
               <div className='flex md:items-start items-center md:flex-row flex-col gap-3 mt-5'>
