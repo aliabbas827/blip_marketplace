@@ -2,6 +2,10 @@ import React from 'react'
 import * as images from "../../assets"
 import { Link } from 'react-router-dom'
 const Delivery = () => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // setToggle(false);
+      };
     return (
         <>
             <section className='pt-10' id='delivery-zone'>
@@ -20,7 +24,7 @@ const Delivery = () => {
                                 <h1 className='md:text-[24px] lg:text-[29px] xl:text-[40px] font-bold tracking-wide text-white' >Join Our Network</h1>
                                 <p className='md:text-[12px] lg:text-[15px] xl:text-[22px] text-white'>For QSRs, Restaurants, and Retailers</p>
                             </div>
-                            <Link to={"/contact"} className='bg-white text-black md:text-[10px] lg:text-[13px] xl:text-[15px] font-bold px-5 lg:px-7 py-2 lg:py-3 rounded-[10px] tracking-wider'>BECOME A PARTNER</Link>
+                            <Link to={"/contact"} onClick={scrollToTop} className='bg-white text-black md:text-[10px] lg:text-[13px] xl:text-[15px] font-bold px-5 lg:px-7 py-2 lg:py-3 rounded-[10px] tracking-wider'>BECOME A PARTNER</Link>
                         </div>
                     </div>
                 </div>
@@ -44,7 +48,7 @@ const Delivery = () => {
                         <h1 className='text-[30px]  font-bold tracking-wide text-white' >Join Our Network</h1>
                         <div className='flex flex-col items-center gap-4'>
                             <p className='text-[18px] text-white'>For QSRs, Restaurants, and Retailers</p>
-                            <Link to={"/contact"} className='bg-white text-black text-[15px] font-bold px-14 py-3 rounded-[10px] tracking-wider'>BECOME A PARTNER</Link>
+                            <Link to={"/contact"} onClick={scrollToTop} className='bg-white text-black text-[15px] font-bold px-14 py-3 rounded-[10px] tracking-wider'>BECOME A PARTNER</Link>
                         </div>
                     </div>
                 </div>

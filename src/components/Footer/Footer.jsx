@@ -3,7 +3,7 @@ import * as images from "../../assets"
 import { Link } from 'react-router-dom';
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     // setToggle(false);
   };
   return (
