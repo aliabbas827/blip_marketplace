@@ -11,6 +11,8 @@ import {
 import Layout from "../Layout";
 import Home from './pages/Home/Home.jsx';
 import ContactUs from './pages/ContactUs/ContactUs.jsx';
+import TermsServices from './pages/TermsServices/TermsServices.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy.jsx';
 
 
 const router = createBrowserRouter(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="contact" element={<ContactUs/>} />
+      <Route path="terms-of-service" element={<TermsServices />} />
+      <Route path="privacy-policy" element={<PrivacyPolicy />} />
     </Route>
   )
 );

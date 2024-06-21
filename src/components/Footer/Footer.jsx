@@ -1,5 +1,10 @@
 import React from 'react'
 import * as images from "../../assets"
+import { Link } from 'react-router-dom';
+const scrollToTop = () => {
+  window.scrollTo({ top: 0 });
+  setToggle(false);
+};
 const Footer = () => {
   return (
     <footer className='py-6'>
@@ -13,7 +18,7 @@ const Footer = () => {
           </a>
           <p className='text-center px-2'>All Blip Delivery drone operators are FAA Part 107 certified and adhere to all FAA regulations and safety guidelines. Our drones are equipped with advanced safety features and are maintained to the highest standards. Blip Delivery is committed to ensuring secure and efficient deliveries, prioritizing the safety of our customers and communities. For more information about our safety practices and policies, please visit our Safety and Compliance page.</p>
           <br />
-          <p className='text-center px-2'> © 2024 BLIP DELIVERY INC. All Rights Reserved. About Us   | Privacy Policy | Terms of Service</p>
+          <p className='text-center px-2'> © 2024 BLIP DELIVERY INC. All Rights Reserved. About Us   | <Link to={"privacy-policy"}  onClick={scrollToTop}>Privacy Policy</Link> | <Link to={"terms-of-service"}  onClick={scrollToTop}>Terms of Service</Link></p>
         </div>
       </div>
     </footer>
