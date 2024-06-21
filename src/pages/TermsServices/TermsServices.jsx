@@ -5,12 +5,12 @@ const TermsServices = () => {
     return (
         <>
             <section>
-                <div className='bg_contact md:h-[60vh] h-[40vh]'>
+                <div className='bg_contact md:h-[60vh] mt-10 h-[40vh]'>
 
                 </div>
-                <div className='md:container md:mx-auto px-4 md:px-2 pb-16'>
+                <div className='md:container md:mx-auto px-4 md:px-20 pb-16'>
                     <div className='md:mt-[-120px] mt-[-60px] flex md:flex-row flex-col justify-start md:gap-3 gap-10'>
-                        <div className='md:w-[40%] w-full flex flex-col md:items-start items-center gap-6'>
+                        <div className='md:w-[45%] w-full flex flex-col md:items-start items-center gap-6'>
                             <h1 className='uppercase tracking-[8px] font-semibold text-lg'>TERMS OF SERVICE</h1>
                             <h1 className='capitalize font-bold md:text-4xl text-3xl text-center sm:text-left'>Effective Date: June 20th 2024
                             </h1>

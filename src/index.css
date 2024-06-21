@@ -103,7 +103,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
 }
 .bg-map-mobile {
-  background-image: url("../src/assets/mapmobile.png");
+  background-image: url("../src/assets/map.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,3 +142,17 @@ input::-webkit-inner-spin-button {
   background-position: top;
   background-repeat: no-repeat;
 }
+/* @media screen and (max-width: 768px) {
+  .bg-map-mobile {
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 80%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("../src/assets/map.png");
+    background-size: 100% 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+} */

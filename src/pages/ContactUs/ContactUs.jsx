@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <>
       <section className="">
-        <div className='bg_contact md:h-[60vh] h-[40vh]'>
+        <div className='bg_contact md:h-[60vh] mt-10 h-[40vh]'>
         </div>
         <div className='md:container md:mx-auto pb-16'>
           <div className='md:mt-[-120px] mt-[-60px] flex md:flex-row flex-col justify-center md:gap-3 gap-10'>
@@ -15,12 +15,12 @@ const ContactUs = () => {
               <h1 className='capitalize font-bold md:text-5xl text-3xl'>Let's get in touch</h1>
               <div className='flex md:items-start items-center md:flex-row flex-col gap-3 mt-5'>
                 <img src={images.location} alt="" className="w-6" />
-                <p className="font-medium text-center md:text-start">4136 Del Rey Avenue. Marina Del Rey, <br /> CA 90292</p>
+                <p className="font-medium text-center md:text-start">4136 Del Rey Avenue. <br />  Marina Del Rey,CA 90292</p>
               </div>
-              <div className='flex md:items-start items-center md:flex-row flex-col gap-3 mt-10 md:mt-6'>
+              {/* <div className='flex md:items-start items-center md:flex-row flex-col gap-3 mt-10 md:mt-6'>
                 <img src={images.mail} alt="" className="w-6" />
                 <p className="font-medium">sales@blip.delivery</p>
-              </div>
+              </div> */}
             </div>
             <ContactForm />
           </div>
