@@ -89,10 +89,10 @@ const Delivery = () => {
                     <p className='w-[60%] sm:w-full text-center text-[16px] lg:text-[18px] xl:text-[22px] '>Currently serving select areas. More coming soon!</p>
                 </div>
                 <div className='bg-map md:h-[70vh]  lg:h-[90vh] xl:h-[90vh] mt-20 rounded-t-[60px] relative hidden md:block'>
-                    <div className='absolute bottom-[-25vh]'>
+                    <div className='absolute bottom-[-12vh] 2xl:right-[18%]'>
                         <img src={images.drone} alt="" />
                     </div>
-                    <div className='absolute md:bottom-[-49px] lg:bottom-[-20px] xl:bottom-2 md:right-[36%] lg:right-[37%] '>
+                    <div className='absolute md:bottom-[-49px] lg:bottom-[-20px] xl:bottom-2 md:right-[36%] lg:right-[37%] 2xl:right-[42.5%] '>
                         <div className='flex flex-col items-center justify-center md:gap-3 lg:gap-6 xl:gap-8' ref={sectionRef2}>
                             <div className='flex flex-col items-center '>
                                 <h1 className='md:text-[24px] lg:text-[29px] xl:text-[40px] font-bold tracking-wide text-white' >Join Our Network</h1>

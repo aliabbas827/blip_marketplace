@@ -50,8 +50,8 @@ const Header = () => {
 
     return (
         <>
-            <header className={`fixed bg-white top-0 left-0 w-full md:container md:m-auto px-4 z-30 transition-transform duration-300 ${showHeader ? '' : '-translate-y-full'}`}>
-                <div className='container mx-auto px-0 md:px-4 lg:px-5 xl:px-10 py-4 flex justify-between items-center'>
+            <header className={`fixed bg-white top-0 left-0 w-full px-4 md:px-10 z-30 transition-transform duration-300 ${showHeader ? '' : '-translate-y-full'}`}>
+                <div className='container mx-auto px-0 md:px-4 lg:px-5 xl:px-10 py-4 flex justify-between w-full items-center'>
                     <div className='flex gap-5 md:gap-5 lg:gap-10 xl:gap-20 items-center'>
                         <Link to="/" className=''>
                             <img src={images.logo} alt="Logo" className='w-24 md:w-28 lg:w-24 xl:w-28' />
